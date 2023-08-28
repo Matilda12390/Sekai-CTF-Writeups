@@ -5,7 +5,7 @@ attend the event. Should we accept the invitation and schedule the trip?
 
 Author: sahuang
 ---
-Given file: eml file: DEFCON_Finals_Invitation.eml
+(Given file){DEFCON_Finals_Invitation.eml}
 
 So we start out with an email. Looking at the message ID we see `Message-Id: <20230626040116.E7EA75474A4@emkei.cz>` which means that this was made with the fake emailer software emkei which explains how the email address looks real since emkei can send emails from any address without having access to it. So we can move on to looking at the attached calendar invite. 
 
