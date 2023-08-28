@@ -5,7 +5,7 @@ attend the event. Should we accept the invitation and schedule the trip?
 
 Author: sahuang
 ---
-(Given file){DEFCON_Finals_Invitation.eml}
+![Given file](DEFCON_Finals_Invitation.eml)
 
 So we start out with an email. Looking at the message ID we see `Message-Id: <20230626040116.E7EA75474A4@emkei.cz>` which means that this was made with the fake emailer software emkei which explains how the email address looks real since emkei can send emails from any address without having access to it. So we can move on to looking at the attached calendar invite. 
 
@@ -15,7 +15,7 @@ The venue-guide link leads us to download a file named `venue-map.png.vbs` which
 The vbs file has a lot of code in it, a lot is only relevant to the malware but everything after the final "your data is ours now pls send bitcoin" message is heavily obfuscated and looks strange, why would there be more code after the ransom message?
 
 I picked out all the strange code and placed it in my own vbs file to run. 
-![[pls.vbs]]
+![pls.vbs](pls.vbs) (named pls because I was asking nicely for it to work)
 
 The output is as follows:
 `c:\temp\defcon-flag.png.compromised `
@@ -35,7 +35,7 @@ End With
 res = Msgbox("Thank you for your cooperation!", vbOKOnly+vbInformation, "")
 ```
 
-The second one is a link to download a file named `defcon-flag.png.XORed` which, from the name, we can assume is our flag as an image that has been XORed. So now we just need to the key to XOR it back with. 
+The second one is a link to download a file named ![defcon-flag.png.XORed](defcon-flag.png.XORed) which, from the name, we can assume is our flag as an image that has been XORed. So now we just need to the key to XOR it back with. 
 
 If we send our own POST request to the url in the third output (I used https://reqbin.com/post-online to do this) with a blank username, we get the following returned:
 `{
@@ -50,7 +50,7 @@ Interesting. So if we instead send admin as the username, we get:
 }`
 
 Very nice. From here I had to play around with cyberchef to work out how to use this key. I ended up converting the key to hex and XORing it with the png.XORED file and got the following image.
-![[Pasted image 20230827115653.png]]
+![Defcon final flag](Defcon final flag)
 If we then flip the image both vertically and horizontally, we get the flag 
 `SEKAI{so_i_guess_we'll_get_more_better_next_year-_-}`
 
