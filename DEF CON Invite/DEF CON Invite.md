@@ -50,7 +50,7 @@ Interesting. So if we instead send admin as the username, we get:
 }`
 
 Very nice. From here I had to play around with cyberchef to work out how to use this key. I ended up converting the key to hex and XORing it with the png.XORED file and got the following image.
-![Defcon final flag](Defcon final flag.png)
+![Defcon final flag.png](Defcon final flag.png)
 If we then flip the image both vertically and horizontally, we get the flag 
 `SEKAI{so_i_guess_we'll_get_more_better_next_year-_-}`
 
