@@ -4,7 +4,7 @@ https://azusawa.world/#/2023/03/02
 Author: enscribe
 ---
 
-[Given files](dist.zip)
+Given files: Large zip that contains a unity game that github thinks is too big.
 
 We start with the following description of an unfortunate weeb.
 ![Chall_desc.png](Chall_desc.png)
